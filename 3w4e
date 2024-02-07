@@ -1,0 +1,47 @@
+#include <iostream>
+
+int main()
+{
+    maarita(2,100);
+
+    return 0;
+}
+
+class Kerrostalo {
+public:
+    double lakseKulutus(double);
+private:
+    Katutaso eka;
+    Kerros toka;
+    Kerros kolmas;
+};
+
+class Katutaso : public Kerros {
+public:
+    Asunto as1;
+    Asunto as2;
+    void maaritaAsunnot();
+    double laskeKulutus(double);
+};
+
+class Asunto {
+    Asunto(){
+        std::cout << "Asunto luotu" << std::endl;
+    }
+public: 
+    int asukasMaara;
+    int nelio;
+    void maarita(int,int) {
+        std::cout << "Asunto maaritetty asukkaita = " << asukasMaara << "nelioita = " << nelio <<std::endl;
+    };
+    double laskeKulutus(double);
+};
+class Kerros {
+public:
+    Asunto as1;
+    Asunto as2;
+    Asunto as3;
+    Asunto as4;
+    void maaritaAsunnot();
+    double lakseKulutus(double);
+};
